@@ -23,7 +23,7 @@ public class Bubble4 {
     }
 
     public static void main(String[] args) {
-        Student s0 = new Student("Unknown", 102, 42, new int[] { 76, 72, 84 });
+        Student s0 = new Student("Piyush Bansal", 102, 42, new int[] { 76, 72, 84 });
         Student s1 = new Student("Aman Gupta", 105, 41, new int[] { 76, 72, 84 });
         Student s2 = new Student("Anupam Mittal", 108, 41, new int[] { 76, 74, 84, 92 });
         Student s3 = new Student("Namita Thapar", 103, 38, new int[] { 93, 90, 88, 82, 59 });

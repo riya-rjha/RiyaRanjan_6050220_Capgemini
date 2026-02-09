@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class PrimitiveBubbleSort {
+public class Bubble1 {
     public static void main(String[] args) {
         int[] nums = { 4, 3, 5, 2, 1 };
         int n = nums.length;

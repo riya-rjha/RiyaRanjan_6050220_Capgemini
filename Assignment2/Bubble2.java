@@ -1,4 +1,4 @@
-public class StudentBubbleSort {
+public class Bubble2 {
 
     static class Student {
         String name;

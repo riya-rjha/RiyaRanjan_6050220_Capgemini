@@ -1,4 +1,4 @@
-public class EmployeeData {
+public class Bubble3 {
 
     static class Employee {
         String name;

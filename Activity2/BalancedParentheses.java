@@ -1,4 +1,4 @@
-package Activity1;
+package Activity2;
 
 import java.util.Stack;
 

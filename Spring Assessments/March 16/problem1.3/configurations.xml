@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    
+    <!-- Assignemt 1.2: SBU bean-->
+    <!-- <bean id="sbu1" class="cg.demos.springcore_assignments.beans.SBU">-->
+     <!-- <constructor-arg index="0" value="0001"></constructor-arg>-->
+     <!-- <constructor-arg index="1" value="Finance Services"></constructor-arg>-->
+     <!-- <constructor-arg index="2" value="Mrs. Lata Verma"></constructor-arg>-->
+    <!-- </bean>-->
+    
+    
+	<!-- <bean id="emp1" class="cg.demos.springcore_assignments.beans.Employee">-->
+	 <!-- <constructor-arg index="0" value="1001"></constructor-arg>-->
+	 <!-- <constructor-arg index="1" value="Suyash"></constructor-arg>-->
+	 <!-- <constructor-arg index="2" value="50000"></constructor-arg>-->
+	 <!-- <constructor-arg index="3" value="Finance"></constructor-arg>-->
+	 <!-- <constructor-arg index="4" value="23"></constructor-arg>-->
+	 <!-- <constructor-arg index="5" ref="sbu1"></constructor-arg>--> <!-- This is for Assignment 1.2-->
+	<!-- </bean>-->
+	
+	
+	<bean id="sbu1" class="cg.demos.springcore_assignments.beans.SBU">
+	 <property name="sbuId" value="0001"></property>
+	 <property name="sbuName" value="Financial Services"></property>
+	 <property name="sbuHead" value="Mrs. Lata Verma"></property>
+	 <property name="empList">
+	  <list>
+	   <bean class="cg.demos.springcore_assignments.beans.Employee">
+	    <property name="employeeId" value="1"></property>
+	    <property name="employeeName" value="Suyash"></property>
+	    <property name="salary" value="50000"></property>
+	    <property name="businessUnit" value="Financial Services"></property>
+	    <property name="age" value="23"></property>
+	   </bean>
+	   <bean class="cg.demos.springcore_assignments.beans.Employee">
+	    <property name="employeeId" value="2"></property>
+	    <property name="employeeName" value="Alice"></property>
+	    <property name="salary" value="50000"></property>
+	    <property name="businessUnit" value="Financial Services"></property>
+	    <property name="age" value="23"></property>
+	   </bean>
+	  </list>
+	 </property>
+	</bean>
+	
+
+</beans>

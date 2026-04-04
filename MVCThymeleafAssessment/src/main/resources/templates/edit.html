@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Edit Employee</title>
+</head>
+
+<body>
+
+	<h2>Edit Employee</h2>
+
+	<form th:action="@{/update}" th:object="${emp}" method="post">
+
+		<p>
+			<b>ID</b>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<span th:text="*{empId}"></span>
+			<input type="hidden" th:field="*{empId}" />
+		</p>
+
+		<p>
+			<b>Name</b>
+			&nbsp;
+			<input type="text" th:field="*{empName}" style="width:250px;" />
+			<br>
+			<span th:if="${#fields.hasErrors('empName')}" th:errors="*{empName}"></span>
+		</p>
+
+		<p>
+			<b>Salary</b>
+			&nbsp;
+			<input type="number" th:field="*{empSal}" style="width:250px;" />
+			<br>
+			<span th:if="${#fields.hasErrors('empSal')}" th:errors="*{empSal}"></span>
+		</p>
+
+		<p>
+			<b>DOJ</b>
+			&nbsp;&nbsp;
+			<input type="date" th:field="*{empDoj}" placeholder="yyyy-MM-dd" style="width:250px;" />
+			<br>
+			<span th:if="${#fields.hasErrors('empDoj')}" th:errors="*{empDoj}"></span>
+		</p>
+
+		<p>
+			<b>Dept</b>
+			&nbsp;
+			<input type="text" th:field="*{deptName}" style="width:250px;" />
+			<br>
+			<span th:if="${#fields.hasErrors('deptName')}" th:errors="*{deptName}"></span>
+		</p>
+
+		<br>
+
+		<button type="submit">Save</button>
+
+	</form>
+
+</body>
+
+</html>
